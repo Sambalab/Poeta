@@ -1,0 +1,24 @@
+En el punto uno, cuando me refiero a "preparar el entorno", implica configurar tu sistema para que tenga todo lo necesario para ejecutar Llama 2. Esta configuración puede hacerse de dos maneras: de manera general en tu Mac (globalmente) o específicamente dentro de un entorno virtual para el proyecto (localmente). La opción recomendada es hacerlo localmente, ya que esto ayuda a mantener organizadas y separadas las dependencias de diferentes proyectos. Aquí te explico cómo hacerlo en tu Mac:
+
+Instalar Anaconda (opcional, pero recomendado):
+
+Anaconda es un gestor de paquetes y entornos para Python. Facilita la gestión de diferentes versiones de Python y librerías.
+Descarga e instala Anaconda desde su sitio web.
+Sigue las instrucciones de instalación para macOS.
+Crear un Entorno Virtual con Anaconda:
+
+Abre la Terminal.
+Crea un nuevo entorno virtual con Anaconda ejecutando: conda create -n llama2 python=3.8, donde llama2 es el nombre del entorno y python=3.8 especifica la versión de Python.
+Activa el entorno con: conda activate llama2.
+Instalar PyTorch:
+
+Dentro del entorno activado, instala PyTorch. La forma de instalar PyTorch puede variar según tu configuración de hardware (especialmente si tienes una GPU).
+Para una instalación estándar, puedes usar: conda install pytorch torchvision -c pytorch. Si necesitas una configuración específica para GPU, consulta la página de instalación de PyTorch.
+Instalar wget y md5sum:
+
+Estas herramientas son necesarias para descargar los modelos de Llama 2.
+En macOS, puedes instalarlas usando Homebrew, un gestor de paquetes para macOS.
+Si no tienes Homebrew, instálalo siguiendo las instrucciones en su sitio web.
+Luego, instala wget con: brew install wget.
+Para md5sum, macOS usa md5, que es una herramienta similar y ya viene instalada por defecto.
+Al utilizar un entorno virtual, te aseguras de que las dependencias y paquetes instalados para este proyecto no interfieran con otros proyectos o con la configuración global de tu sistema. Además, te facilita la reproducción del entorno en otros sistemas o para otros desarrolladores que trabajen en el mismo proyecto.
